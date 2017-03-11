@@ -752,9 +752,9 @@ class MusicBot(discord.Client):
                     command_name = att.replace('cmd_', '').lower()
                     commands.append("{}{}".format(self.config.command_prefix, command_name))
 
-            helpmsg += ", ".join(commands)
+            helpmsg += ('!play\n !queue\n !skip\n !search\n !help\n !clean\n !summon\n ')
             helpmsg += "```"
-            helpmsg += "https://github.com/SexualRhinoceros/MusicBot/wiki/Commands-list"
+            helpmsg += "Use !help <command> for more instructions! Ex: !help search"
 
             return Response(helpmsg, reply=True, delete_after=60)
 
